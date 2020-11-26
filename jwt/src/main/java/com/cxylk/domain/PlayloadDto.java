@@ -28,6 +28,6 @@ public class PlayloadDto {
     private String jti;
     @ApiModelProperty("用户名称")
     private String username;
-    @ApiModelProperty("用户用于的权限")
+    @ApiModelProperty("用户拥有的权限")
     private List<String> authorities;
 }

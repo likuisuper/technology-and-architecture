@@ -49,7 +49,7 @@ public class JwtTokenServiceImpl implements JwtTokenService {
         //创建HMAC验证器
         JWSVerifier jwsVerifier=new MACVerifier(secret);
         if(!jwsObject.verify(jwsVerifier)){
-            throw new JwtInvalidException("token签名不合法")；
+            throw new JwtInvalidException("token签名不合法");
         }
         String payload=jwsObject.getPayload().toString();
         PlayloadDto playloadDto= JSONUtil.toBean(payload,PlayloadDto.class);
