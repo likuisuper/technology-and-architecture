@@ -2,8 +2,8 @@ package com.cxylk.service;
 
 import com.cxylk.domain.PlayloadDto;
 import com.nimbusds.jose.JOSEException;
+import com.nimbusds.jose.jwk.RSAKey;
 
-import java.security.interfaces.RSAKey;
 import java.text.ParseException;
 
 /**
@@ -47,7 +47,7 @@ public interface JwtTokenService {
      * @return
      * @throws ParseException
      */
-    PlayloadDto verifyTokenByRSA(String token,RSAKey rsaKey) throws ParseException;
+    PlayloadDto verifyTokenByRSA(String token, RSAKey rsaKey) throws ParseException,JOSEException;
 
     /**
      * 获取默认payload
@@ -59,5 +59,5 @@ public interface JwtTokenService {
      * 获取默认RSAKey
      * @return
      */
-    RSAKey getDefaultRSAKey();
+    com.nimbusds.jose.jwk.RSAKey getDefaultRSAKey();
 }
