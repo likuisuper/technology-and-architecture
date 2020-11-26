@@ -30,7 +30,7 @@ public class Swagger2Config {
                 .apiInfo(apiInfo())
                 .select()
                 //为当前包下Controller生成API文档
-                .apis(RequestHandlerSelectors.basePackage("com.cxylk.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.cxylk.models.controller"))
                 //为有@Api注解的Controller生成API文档
 //                .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
                 //为有@ApiOperation注解的方法生成API文档

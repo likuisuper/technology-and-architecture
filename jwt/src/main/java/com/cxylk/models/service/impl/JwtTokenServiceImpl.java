@@ -1,13 +1,12 @@
-package com.cxylk.service.impl;
+package com.cxylk.models.service.impl;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.json.JSONUtil;
-import com.cxylk.common.CommonResult;
 import com.cxylk.domain.PlayloadDto;
 import com.cxylk.exception.JwtExpiredException;
 import com.cxylk.exception.JwtInvalidException;
-import com.cxylk.service.JwtTokenService;
+import com.cxylk.models.service.JwtTokenService;
 import com.nimbusds.jose.*;
 import com.nimbusds.jose.crypto.MACSigner;
 import com.nimbusds.jose.crypto.MACVerifier;

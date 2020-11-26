@@ -1,4 +1,4 @@
-package com.cxylk.service;
+package com.cxylk.models.service;
 
 import com.cxylk.domain.PlayloadDto;
 import com.nimbusds.jose.JOSEException;

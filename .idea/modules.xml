@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/jwt/jwt.iml" filepath="$PROJECT_DIR$/jwt/jwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-demo.iml" filepath="$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/technology-and-architecture.iml" filepath="$PROJECT_DIR$/.idea/technology-and-architecture.iml" />
     </modules>
   </component>

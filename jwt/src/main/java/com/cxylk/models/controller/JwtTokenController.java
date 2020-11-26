@@ -1,19 +1,16 @@
-package com.cxylk.controller;
+package com.cxylk.models.controller;
 
 import cn.hutool.crypto.SecureUtil;
 import cn.hutool.json.JSONUtil;
 import com.cxylk.common.CommonResult;
-import com.cxylk.common.ResultCode;
 import com.cxylk.domain.PlayloadDto;
-import com.cxylk.service.JwtTokenService;
+import com.cxylk.models.service.JwtTokenService;
 import com.nimbusds.jose.JOSEException;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
