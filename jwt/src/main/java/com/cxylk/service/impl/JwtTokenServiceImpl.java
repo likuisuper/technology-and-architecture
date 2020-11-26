@@ -3,6 +3,7 @@ package com.cxylk.service.impl;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.json.JSONUtil;
+import com.cxylk.common.CommonResult;
 import com.cxylk.domain.PlayloadDto;
 import com.cxylk.exception.JwtExpiredException;
 import com.cxylk.exception.JwtInvalidException;
@@ -128,4 +129,5 @@ public class JwtTokenServiceImpl implements JwtTokenService {
         RSAPrivateKey privateKey= (RSAPrivateKey) keyPair.getPrivate();
         return new RSAKey.Builder(publicKey).privateKey(privateKey).build();
     }
+
 }

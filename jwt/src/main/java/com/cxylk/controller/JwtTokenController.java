@@ -7,6 +7,8 @@ import com.cxylk.common.ResultCode;
 import com.cxylk.domain.PlayloadDto;
 import com.cxylk.service.JwtTokenService;
 import com.nimbusds.jose.JOSEException;
+import com.nimbusds.jose.jwk.JWKSet;
+import com.nimbusds.jose.jwk.RSAKey;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -51,6 +53,39 @@ public class JwtTokenController {
     public CommonResult verifyTokenByHMAC(String token){
         try {
             PlayloadDto playloadDto=jwtTokenService.verifyTokenByHMAC(token,SecureUtil.md5("test"));
+            return CommonResult.success(playloadDto);
+        } catch (ParseException | JOSEException e) {
+            e.printStackTrace();
+        }
+        return CommonResult.failed();
+    }
+
+    @ApiOperation(value = "获取非对称加密(RSA)算法的公钥")
+    @RequestMapping(value = "/rsa/publicKey",method = RequestMethod.GET)
+    public Object getRSAPublicKey(){
+        RSAKey rsaKey=jwtTokenService.getDefaultRSAKey();
+        return new JWKSet(rsaKey).toJSONObject();
+    }
+
+    @ApiOperation(value = "使用非对称加密算法(RSA)生成token")
+    @RequestMapping(value = "rsa/generate",method = RequestMethod.GET)
+    public CommonResult generateTokenByRSA(){
+        try {
+            PlayloadDto playloadDto=jwtTokenService.getDefaultPayloadDto();
+            RSAKey rsaKey=jwtTokenService.getDefaultRSAKey();
+            String token=jwtTokenService.generateTokenByRSA(JSONUtil.toJsonStr(playloadDto),rsaKey);
+            return CommonResult.success(token);
+        } catch (JOSEException e) {
+            e.printStackTrace();
+        }
+        return CommonResult.failed();
+    }
+
+    @ApiOperation(value = "使用非对称加密算法(RSA)校验token")
+    @RequestMapping(value = "rsa/verify",method = RequestMethod.GET)
+    public CommonResult verifyTokenByRSA(String token){
+        try {
+            PlayloadDto playloadDto=jwtTokenService.verifyTokenByRSA(token,jwtTokenService.getDefaultRSAKey());
             return CommonResult.success(playloadDto);
         } catch (ParseException | JOSEException e) {
             e.printStackTrace();
