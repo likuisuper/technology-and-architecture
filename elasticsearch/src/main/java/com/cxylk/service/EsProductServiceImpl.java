@@ -1,10 +1,9 @@
-package com.cxylk.service.impl;
+package com.cxylk.service;
 
 import cn.hutool.core.collection.CollectionUtil;
-import com.cxylk.dao.EsProductDao;
+import com.cxylk.dto.EsProductDao;
 import com.cxylk.nosql.elasticsearch.document.EsProduct;
 import com.cxylk.nosql.elasticsearch.repository.EsProductRepository;
-import com.cxylk.service.EsProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

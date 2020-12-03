@@ -9,9 +9,11 @@
         <module name="jwt" />
         <module name="elasticsearch" />
         <module name="mybatis-plus-demo" />
+        <module name="aop" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="aop" target="1.8" />
       <module name="elasticsearch" target="1.8" />
       <module name="jwt" target="1.8" />
       <module name="mybatis-plus-demo" target="1.8" />
@@ -19,6 +21,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="aop" options="-parameters" />
       <module name="elasticsearch" options="-parameters" />
       <module name="jwt" options="-parameters" />
       <module name="mybatis-plus-demo" options="-parameters" />

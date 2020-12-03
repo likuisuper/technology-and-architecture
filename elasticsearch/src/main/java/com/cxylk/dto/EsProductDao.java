@@ -1,4 +1,4 @@
-package com.cxylk.dao;
+package com.cxylk.dto;
 
 import com.cxylk.nosql.elasticsearch.document.EsProduct;
 import org.apache.ibatis.annotations.Param;
