@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/elasticsearch/elasticsearch.iml" filepath="$PROJECT_DIR$/elasticsearch/elasticsearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/jwt/jwt.iml" filepath="$PROJECT_DIR$/jwt/jwt.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-demo.iml" filepath="$PROJECT_DIR$/mybatis-plus-demo/mybatis-plus-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis/redis.iml" filepath="$PROJECT_DIR$/redis/redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/technology-and-architecture.iml" filepath="$PROJECT_DIR$/.idea/technology-and-architecture.iml" />
     </modules>
   </component>

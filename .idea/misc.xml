@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/mybatis-plus-demo/pom.xml" />
         <option value="$PROJECT_DIR$/elasticsearch/pom.xml" />
         <option value="$PROJECT_DIR$/aop/pom.xml" />
+        <option value="$PROJECT_DIR$/redis/pom.xml" />
       </list>
     </option>
   </component>
