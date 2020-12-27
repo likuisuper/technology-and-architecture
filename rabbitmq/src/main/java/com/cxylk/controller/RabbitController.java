@@ -5,6 +5,7 @@ import com.cxylk.common.api.CommonResult;
 import com.cxylk.direct.DirectSender;
 import com.cxylk.fanout.FanoutSender;
 import com.cxylk.simple.SimpleSender;
+import com.cxylk.topic.TopicSender;
 import com.cxylk.work.WorkSender;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -19,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Author likui
  * @Date 2020/12/26 16:43
  **/
-@Api(value = "RabbitController",tags = {"RabbitController"})
+@Api(value = "RabbitController", tags = {"RabbitController"})
 @RestController
 @RequestMapping("/rabbit")
 public class RabbitController {
@@ -39,8 +40,11 @@ public class RabbitController {
     @Autowired
     private DirectSender directSender;
 
+    @Autowired
+    private TopicSender topicSender;
+
     @ApiOperation(value = "简单模式")
-    @RequestMapping(value = "/simple",method = RequestMethod.GET)
+    @RequestMapping(value = "/simple", method = RequestMethod.GET)
     public CommonResult<Object> simpleTest() {
         for (int i = 0; i < 10; i++) {
             simpleSender.send();
@@ -50,8 +54,8 @@ public class RabbitController {
     }
 
     @ApiOperation(value = "工作模式")
-    @RequestMapping(value = "/work",method = RequestMethod.GET)
-    public CommonResult<Object> workTest(){
+    @RequestMapping(value = "/work", method = RequestMethod.GET)
+    public CommonResult<Object> workTest() {
         for (int i = 0; i < 10; i++) {
             workSender.send(i);
             ThreadUtil.sleep(1000);
@@ -60,8 +64,8 @@ public class RabbitController {
     }
 
     @ApiOperation(value = "发布/订阅模式")
-    @RequestMapping(value = "/fanout",method = RequestMethod.GET)
-    public CommonResult<Object> fanoutTest(){
+    @RequestMapping(value = "/fanout", method = RequestMethod.GET)
+    public CommonResult<Object> fanoutTest() {
         for (int i = 0; i < 10; i++) {
             fanoutSender.send(i);
             ThreadUtil.sleep(1000);
@@ -70,10 +74,20 @@ public class RabbitController {
     }
 
     @ApiOperation(value = "路由模式")
-    @RequestMapping(value = "/direct",method = RequestMethod.GET)
-    public CommonResult<Object> directTest(){
+    @RequestMapping(value = "/direct", method = RequestMethod.GET)
+    public CommonResult<Object> directTest() {
         for (int i = 0; i < 10; i++) {
             directSender.send(i);
+            ThreadUtil.sleep(1000);
+        }
+        return CommonResult.success(null);
+    }
+
+    @ApiOperation(value = "通配符模式")
+    @RequestMapping(value = "/topic",method = RequestMethod.GET)
+    public CommonResult<Object> topicTest(){
+        for (int i = 0; i < 10; i++) {
+            topicSender.send(i);
             ThreadUtil.sleep(1000);
         }
         return CommonResult.success(null);
