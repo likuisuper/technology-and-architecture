@@ -2,6 +2,7 @@ package com.cxylk.controller;
 
 import cn.hutool.core.thread.ThreadUtil;
 import com.cxylk.common.api.CommonResult;
+import com.cxylk.direct.DirectSender;
 import com.cxylk.fanout.FanoutSender;
 import com.cxylk.simple.SimpleSender;
 import com.cxylk.work.WorkSender;
@@ -34,6 +35,10 @@ public class RabbitController {
     @Autowired
     private FanoutSender fanoutSender;
 
+    //路由模式
+    @Autowired
+    private DirectSender directSender;
+
     @ApiOperation(value = "简单模式")
     @RequestMapping(value = "/simple",method = RequestMethod.GET)
     public CommonResult<Object> simpleTest() {
@@ -59,6 +64,16 @@ public class RabbitController {
     public CommonResult<Object> fanoutTest(){
         for (int i = 0; i < 10; i++) {
             fanoutSender.send(i);
+            ThreadUtil.sleep(1000);
+        }
+        return CommonResult.success(null);
+    }
+
+    @ApiOperation(value = "路由模式")
+    @RequestMapping(value = "/direct",method = RequestMethod.GET)
+    public CommonResult<Object> directTest(){
+        for (int i = 0; i < 10; i++) {
+            directSender.send(i);
             ThreadUtil.sleep(1000);
         }
         return CommonResult.success(null);
