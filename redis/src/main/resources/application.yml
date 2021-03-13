@@ -7,9 +7,9 @@ spring:
     username: root
     password: root
   redis:
-    host: localhost #redis服务器地址
+    host: 192.168.63.128 #redis服务器地址
     database: 0 #数据库索引(默认为0)
-    port: 6379 #端口号
+    port: 7369 #端口号
     password: 12345 #密码(默认为空)
     jedis: #redis客户端，2.x版本中默认是Lettuce
       pool:
@@ -32,3 +32,6 @@ redis:
       authCode: "portal:authCode:"
     expire:
       authCode: 120 #验证码超期时间
+logging:
+  level:
+    root: info

@@ -23,7 +23,7 @@ import java.util.List;
  * @Date 2020/12/6 16:08
  **/
 @Aspect
-@Component
+//@Component
 @Slf4j
 public class LogAspect {
     long longTime = 10000;
