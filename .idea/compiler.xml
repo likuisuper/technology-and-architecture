@@ -2,12 +2,15 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jwt" />
         <module name="mybatis-plus-demo" />
+        <module name="ioc" />
+        <module name="quartz" />
         <module name="aop" />
         <module name="redis" />
         <module name="rabbitmq" />
@@ -17,8 +20,10 @@
     <bytecodeTargetLevel>
       <module name="aop" target="1.8" />
       <module name="elasticsearch" target="1.8" />
+      <module name="ioc" target="1.5" />
       <module name="jwt" target="1.8" />
       <module name="mybatis-plus-demo" target="1.8" />
+      <module name="quartz" target="1.8" />
       <module name="rabbitmq" target="1.8" />
       <module name="redis" target="1.8" />
     </bytecodeTargetLevel>
@@ -29,6 +34,7 @@
       <module name="elasticsearch" options="-parameters" />
       <module name="jwt" options="-parameters" />
       <module name="mybatis-plus-demo" options="-parameters" />
+      <module name="quartz" options="-parameters" />
       <module name="rabbitmq" options="-parameters" />
       <module name="redis" options="-parameters" />
     </option>

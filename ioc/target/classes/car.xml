@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean name="car" class="com.cxylk.text.Car">
+        <property name="name" value="baoma"/>
+        <property name="color" value="yellow"/>
+    </bean>
+    <bean name="user" class="com.cxylk.text.User">
+        <property name="name" value="lk"/>
+        <property name="age" value="22"/>
+    </bean>
+</beans>

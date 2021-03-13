@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/aop/pom.xml" />
         <option value="$PROJECT_DIR$/redis/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/ioc/pom.xml" />
+        <option value="$PROJECT_DIR$/quartz/pom.xml" />
       </list>
     </option>
   </component>
