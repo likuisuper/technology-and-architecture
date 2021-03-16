@@ -11,6 +11,7 @@
         <module name="mybatis-plus-demo" />
         <module name="ioc" />
         <module name="quartz" />
+        <module name="common" />
         <module name="aop" />
         <module name="redis" />
         <module name="rabbitmq" />
@@ -19,6 +20,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="aop" target="1.8" />
+      <module name="common" target="1.5" />
       <module name="elasticsearch" target="1.8" />
       <module name="ioc" target="1.5" />
       <module name="jwt" target="1.8" />
