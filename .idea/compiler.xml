@@ -8,20 +8,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jwt" />
-        <module name="mybatis-plus-demo" />
         <module name="ioc" />
-        <module name="quartz" />
         <module name="common" />
-        <module name="aop" />
         <module name="redis" />
+        <module name="aop" />
+        <module name="mybatis-plus-demo" />
         <module name="rabbitmq" />
+        <module name="fastdfs" />
         <module name="elasticsearch" />
+        <module name="quartz" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="aop" target="1.8" />
       <module name="common" target="1.5" />
       <module name="elasticsearch" target="1.8" />
+      <module name="fastdfs" target="1.8" />
       <module name="ioc" target="1.5" />
       <module name="jwt" target="1.8" />
       <module name="mybatis-plus-demo" target="1.8" />
@@ -34,6 +36,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="aop" options="-parameters" />
       <module name="elasticsearch" options="-parameters" />
+      <module name="fastdfs" options="-parameters" />
       <module name="jwt" options="-parameters" />
       <module name="mybatis-plus-demo" options="-parameters" />
       <module name="quartz" options="-parameters" />
