@@ -8,15 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jwt" />
+        <module name="mybatis-plus-demo" />
         <module name="ioc" />
         <module name="common" />
-        <module name="redis" />
+        <module name="quartz" />
+        <module name="spring" />
         <module name="aop" />
-        <module name="mybatis-plus-demo" />
+        <module name="redis" />
         <module name="rabbitmq" />
         <module name="fastdfs" />
         <module name="elasticsearch" />
-        <module name="quartz" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +31,7 @@
       <module name="quartz" target="1.8" />
       <module name="rabbitmq" target="1.8" />
       <module name="redis" target="1.8" />
+      <module name="spring" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
