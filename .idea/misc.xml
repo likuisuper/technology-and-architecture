@@ -21,6 +21,7 @@
         <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/fastdfs/pom.xml" />
         <option value="$PROJECT_DIR$/spring/pom.xml" />
+        <option value="$PROJECT_DIR$/business-dev-mistakes/pom.xml" />
       </list>
     </option>
   </component>

@@ -9,34 +9,37 @@
         <outputRelativeToContentRoot value="true" />
         <module name="jwt" />
         <module name="ioc" />
-        <module name="quartz" />
+        <module name="common" />
         <module name="redis" />
+        <module name="business-dev-mistakes" />
         <module name="spring" />
         <module name="aop" />
         <module name="mybatis-plus-demo" />
         <module name="rabbitmq" />
         <module name="fastdfs" />
         <module name="elasticsearch" />
-        <module name="common" />
+        <module name="quartz" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8">
       <module name="aop" target="1.8" />
-      <module name="common" target="1.5" />
+      <module name="business-dev-mistakes" target="1.8" />
+      <module name="common" target="1.8" />
       <module name="elasticsearch" target="1.8" />
       <module name="fastdfs" target="1.8" />
-      <module name="ioc" target="1.5" />
+      <module name="ioc" target="1.8" />
       <module name="jwt" target="1.8" />
       <module name="mybatis-plus-demo" target="1.8" />
       <module name="quartz" target="1.8" />
       <module name="rabbitmq" target="1.8" />
       <module name="redis" target="1.8" />
-      <module name="spring" target="1.5" />
+      <module name="spring" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="aop" options="-parameters" />
+      <module name="business-dev-mistakes" options="-parameters" />
       <module name="elasticsearch" options="-parameters" />
       <module name="fastdfs" options="-parameters" />
       <module name="jwt" options="-parameters" />
